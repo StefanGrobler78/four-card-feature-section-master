@@ -1,0 +1,121 @@
+:root {
+
+/* ## Colors */
+
+/* ### Primary */
+
+--red: hsl(0, 78%, 62%);
+--cyan: hsl(180, 62%, 55%);
+--orange: hsl(34, 97%, 64%);
+--blue: hsl(212, 86%, 64%);
+
+/* ### Neutral */
+
+--very-dark-blue: hsl(234, 12%, 34%);
+--grayish-blue: hsl(229, 6%, 66%);
+--very-light-gray: hsl(0, 0%, 98%);
+
+/* ## Typography */
+
+/* font Size */
+
+--font-size: 15px;
+
+/* ### Font fammily */
+--ff-prim: "Poppins", sans-serif;
+
+--box-shad: ;
+}
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: var(--ff-prim);
+    color: var(--very-dark-blue);
+}
+img {
+    width: 100%;
+}
+h1,h2,h3,h4,p {
+    margin: 0;
+}
+/* Header */
+
+header {
+    text-align: center;
+    margin-top: 3rem;
+}
+header > h1 {
+    font-weight: 200;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+header > h1 > span {
+    display: block;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+header > p {
+    font-size: clamp(.875rem, 4vw, 1rem);
+    max-width: 60ch;
+    margin: 0 auto;
+    color: var(--grayish-blue);
+    margin-bottom: 2rem;
+    padding-inline: 2rem;
+}
+
+/* Card Container */
+.card__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem;
+}
+
+/* card */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    aspect-ratio: 6/4;
+    box-shadow: 5px 5px 20px var(--grayish-blue);
+    border-radius: 10px;
+    background-color: var(--very-light-gray);
+}
+.card__title{
+    font-weight: 600;
+}
+.card__subtitle {
+    margin-bottom: 2rem;
+    color: var(--grayish-blue);
+}
+.card > img {
+    width: 60px;
+    align-self: end;
+}
+
+.card__container-col_2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Utility Classes */
+
+.bt-super {
+    border-top: 4px solid var(--cyan);
+}
+.bt-team {
+    border-top: 4px solid var(--red);
+}
+.bt-karma {
+    border-top: 4px solid var(--orange);
+}
+.bt-calc {
+    border-top: 4px solid var(--blue);
+}
